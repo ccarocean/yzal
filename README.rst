@@ -13,7 +13,7 @@ To use yzal:
 
 .. code-block:: python
 
-    from yazl import lazy, strict
+    from yzal import lazy, strict
 
     @lazy
     def add(x, y):
