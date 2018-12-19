@@ -57,6 +57,17 @@ Requirements
 ------------
 
 * Python 3.5 or greater
+* wrapt_
+* lazy_object_proxy_
+
+Thanks
+------
+
+We wish to thank the following projects, without which yzal would have been
+much harder to write:
+
+* wrapt_ - A Python module for decorators, wrappers and monkey patching.
+* lazy_object_proxy_ - A fast and thorough lazy object proxy.
 
 
 .. |build-status| image:: https://travis-ci.org/mrshannon/yazl.svg?branch=master&style=flat
@@ -65,3 +76,5 @@ Requirements
 .. |coverage-status| image:: http://codecov.io/github/mrshannon/yazl/coverage.svg?branch=master
    :target: http://codecov.io/github/mrshannon/yazl?branch=master
    :alt: Test coverage
+.. _wrapt: https://wrapt.readthedocs.io/en/latest/
+.. _lazy_object_proxy: https://python-lazy-object-proxy.readthedocs.io/en/latest/
