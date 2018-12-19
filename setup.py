@@ -26,7 +26,7 @@ def get_requirements(filename):
 
 VERSION = re.search(
     r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
-    read('lzal/__init__.py'), re.MULTILINE).group(1)
+    read('yzal.py'), re.MULTILINE).group(1)
 
 setup(
     name='yzal',
