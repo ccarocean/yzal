@@ -1,9 +1,10 @@
 """Lazy evaluation for Python."""
 
-import wrapt
+from functools import wraps
 import lazy_object_proxy
 
-__version__ = '0.0.1a1'
+
+__version__ = '0.0.1'
 
 __all__ = ('Thunk', 'lazy', 'strict')
 
@@ -24,21 +25,20 @@ class Thunk(lazy_object_proxy.Proxy):
         -------
         object
             Result of evaluating the thunk.
+
         """
         return self.__wrapped__  # relies on internal implementation of Proxy
 
 
-@wrapt.decorator
-def lazy(wrapped, _, args, kwargs):
-    """Decorator to make a function lazy.
+def lazy(wrapped):
+    """Decorate a strict function, making it lazy.
 
     Lazy functions will return a :class:`Thunk` when called, delaying any
     computation until the result is needed.
 
     .. note::
 
-        Because this decorator uses the :mod:`wrapt` library it can be used
-        for classmethod's in addition to the typical locations.
+        This will work for
 
     .. caution::
 
@@ -55,9 +55,12 @@ def lazy(wrapped, _, args, kwargs):
 
     .. _pure function: https://en.wikipedia.org/wiki/Pure_function
     """
-    def wrapper():
-        return wrapped(*args, **kwargs)
-    return Thunk(wrapper)
+    @wraps(wrapped)
+    def wrapper(*args, **kwargs):
+        def thunk():
+            return wrapped(*args, **kwargs)
+        return Thunk(thunk)
+    return wrapper
 
 
 def strict(thunk):
@@ -72,6 +75,7 @@ def strict(thunk):
     -------
     object
         Result of evaluating the thunk
+
     """
     try:
         return thunk.__strict__()

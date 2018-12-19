@@ -41,7 +41,7 @@ setup(
     setup_requires=['pytest-runner'],
     install_requires=get_requirements('requirements.txt'),
     tests_require=get_requirements('dev-requirements.txt'),
-    classifiers=(
+    classifiers=[
         'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
@@ -51,6 +51,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Libraries'
-    ),
+    ],
     zip_safe=False
 )
