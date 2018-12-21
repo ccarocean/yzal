@@ -4,7 +4,7 @@ from functools import wraps
 import lazy_object_proxy
 
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 __all__ = ('Thunk', 'lazy', 'strict')
 

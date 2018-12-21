@@ -24,9 +24,6 @@ coverage: check
 		--cov-report html
 
 check:
-	@python setup.py check --restructuredtext --strict && \
-		([ $$? -eq 0 ] && echo "README.rst ok") || \
-		echo "Invalid markup in README.rst!"
 	@python -m pylint --rcfile=.pylintrc $(module)
 	@python -m pycodestyle $(module).py tests
 	@python -m pydocstyle $(module).py

@@ -1,5 +1,5 @@
 import os
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 def read(filename):
@@ -10,14 +10,14 @@ def read(filename):
 
 setup(
     name='yzal',
-    version='0.0.2',
+    version='0.0.3',
     author='Michael R. Shannon',
     author_email='mrshannon.aerospace@gmail.com',
     description='Lazy evaluation for Python.',
     long_description=read('README.rst'),
     license='MIT',
     url='https://github.com/ccarocean/yzal',
-    packages=find_packages(),
+    py_modules=['yzal'],
     setup_requires=['pytest-runner'],
     install_requires=[
         'lazy-object-proxy',
