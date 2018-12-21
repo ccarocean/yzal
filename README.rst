@@ -57,6 +57,17 @@ Requirements
 * Python 3.4 or greater
 * lazy_object_proxy_
 
+
+Installation
+------------
+
+yzal is on PyPI_ so the best way to install it is:
+
+.. code-block:: text
+
+    $ pip install yzal
+
+
 Thanks
 ------
 
@@ -73,3 +84,4 @@ much harder to write:
    :target: http://codecov.io/gh/ccarocean/yzal?branch=master
    :alt: Test coverage
 .. _lazy_object_proxy: https://python-lazy-object-proxy.readthedocs.io/en/latest/
+.. _PyPI: https://pypi.org/
