@@ -66,7 +66,7 @@ much harder to write:
 * lazy_object_proxy_ - A fast and thorough lazy object proxy.
 
 
-.. |build-status| image:: https://travis-ci.org/mrshannon/yazl.svg?branch=master&style=flat
+.. |build-status| image:: https://travis-ci.com/mrshannon/yazl.svg?branch=master&style=flat
    :target: https://travis-ci.org/mrshannon/yazl
    :alt: Build status
 .. |coverage-status| image:: http://codecov.io/github/mrshannon/yazl/coverage.svg?branch=master
