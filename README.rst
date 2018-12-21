@@ -67,7 +67,7 @@ much harder to write:
 
 
 .. |build-status| image:: https://travis-ci.com/mrshannon/yazl.svg?branch=master&style=flat
-   :target: https://travis-ci.org/mrshannon/yazl
+   :target: https://travis-ci.com/mrshannon/yazl
    :alt: Build status
 .. |coverage-status| image:: http://codecov.io/github/mrshannon/yazl/coverage.svg?branch=master
    :target: http://codecov.io/github/mrshannon/yazl?branch=master
