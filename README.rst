@@ -1,8 +1,6 @@
 yzal |build-status| |coverage-status|
 =======================================
 
-WORK IN PROGRESS - This will be removed upon first release.
-
 Lazy evaluation for Python.
 
 
