@@ -69,7 +69,7 @@ much harder to write:
 .. |build-status| image:: https://travis-ci.com/ccarocean/yzal.svg?branch=master&style=flat
    :target: https://travis-ci.com/ccarocean/yzal
    :alt: Build status
-.. |coverage-status| image:: http://codecov.io/github/mrshannon/yzal/coverage.svg?branch=master
-   :target: http://codecov.io/github/mrshannon/yzal?branch=master
+.. |coverage-status| image:: http://codecov.io/gh/ccarocean/yzal/coverage.svg?branch=master
+   :target: http://codecov.io/gh/ccarocean/yzal?branch=master
    :alt: Test coverage
 .. _lazy_object_proxy: https://python-lazy-object-proxy.readthedocs.io/en/latest/
