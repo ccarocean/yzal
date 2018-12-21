@@ -10,7 +10,7 @@ def read(filename):
 
 setup(
     name='yzal',
-    version='0.0.1',
+    version='0.0.2',
     author='Michael R. Shannon',
     author_email='mrshannon.aerospace@gmail.com',
     description='Lazy evaluation for Python.',
@@ -27,11 +27,12 @@ setup(
         'pytest-mock'
     ],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
