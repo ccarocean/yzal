@@ -5,6 +5,12 @@ Changelog
 Unreleased_
 -----------
 
+
+
+
+v0.0.4_ - 2019-01-03
+--------------------
+
 Added
 ^^^^^
 
@@ -12,16 +18,17 @@ Added
 * Type hint support in compliance with `PEP 526`_ and `PEP 561`_.
 * Use mypy for static type checking.
 
-
 Changed
 ^^^^^^^
 
 * Changed from a module based distribution to a package based distribution.
 
-Fixed
-^^^^^
+Removed
+^^^^^^^
 
-* Removed unused rule from tox_ configuration.
+* Unused rule from tox_ configuration.
+* Dropped support for Python 3.4 to support type hinting.
+
 
 
 
@@ -78,6 +85,7 @@ Added
 .. _PEP 526: https://www.python.org/dev/peps/pep-0526/
 .. _PEP 561: https://www.python.org/dev/peps/pep-0561/
 
-.. _Unreleased: https://github.com/ccarocean/yzal/compare/v0.0.3...HEAD
+.. _Unreleased: https://github.com/ccarocean/yzal/compare/v0.0.4...HEAD
+.. _v0.0.4: https://github.com/ccarocean/yzal/compare/v0.0.3...v0.0.4
 .. _v0.0.3: https://github.com/ccarocean/yzal/compare/v0.0.2...v0.0.3
 .. _v0.0.2: https://github.com/ccarocean/yzal/compare/v0.0.1...v0.0.2

@@ -10,7 +10,7 @@ def read(filename):
 
 setup(
     name='yzal',
-    version='0.0.3',
+    version='0.0.4',
     author='Michael R. Shannon',
     author_email='mrshannon.aerospace@gmail.com',
     description='Lazy evaluation for Python.',
@@ -35,7 +35,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
