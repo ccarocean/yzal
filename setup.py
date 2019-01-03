@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(filename):
@@ -17,7 +17,7 @@ setup(
     long_description=read('README.rst'),
     license='MIT',
     url='https://github.com/ccarocean/yzal',
-    py_modules=['yzal'],
+    packages=find_packages(),
     setup_requires=['pytest-runner'],
     install_requires=[
         'lazy-object-proxy',

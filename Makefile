@@ -25,8 +25,8 @@ coverage: check
 
 check:
 	@python -m pylint --rcfile=.pylintrc $(module)
-	@python -m pycodestyle $(module).py tests
-	@python -m pydocstyle $(module).py
+	@python -m pycodestyle $(module) tests
+	@python -m pydocstyle $(module)
 
 html:
 	@$(MAKE) -C docs html
