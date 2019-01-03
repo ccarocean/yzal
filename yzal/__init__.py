@@ -1,8 +1,8 @@
 """Lazy evaluation for Python."""
 
-from typing import Generic, TypeVar, Callable  # for typing
+from typing import cast, Any, Generic, TypeVar, Callable  # for typing
 from functools import wraps
-import lazy_object_proxy
+import lazy_object_proxy  # type: ignore
 
 
 __version__ = '0.0.4'
@@ -31,7 +31,8 @@ class Thunk(lazy_object_proxy.Proxy, Generic[T]):
             Result of evaluating the thunk.
 
         """
-        return self.__wrapped__  # relies on internal implementation of Proxy
+        # relies on internal implementation of Proxy
+        return cast(T, self.__wrapped__)
 
 
 def lazy(wrapped: Callable[..., T]) -> Callable[..., Thunk[T]]:
@@ -71,8 +72,8 @@ def lazy(wrapped: Callable[..., T]) -> Callable[..., Thunk[T]]:
 
     """
     @wraps(wrapped)
-    def wrapper(*args, **kwargs):
-        def thunk():
+    def wrapper(*args: Any, **kwargs: Any) -> Thunk[T]:
+        def thunk() -> T:
             return wrapped(*args, **kwargs)
         return Thunk(thunk)
     return wrapper
