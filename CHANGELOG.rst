@@ -10,6 +10,15 @@ Added
 
 * This CHANGELOG.
 
+Changed
+^^^^^^^
+
+* Changed from a module based distribution to a package based distribution.
+
+Fixed
+^^^^^
+
+* Removed unused rule from tox_ configuration.
 
 
 
