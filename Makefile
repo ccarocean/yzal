@@ -27,6 +27,7 @@ check:
 	@python -m pylint --rcfile=.pylintrc $(module)
 	@python -m pycodestyle $(module) tests
 	@python -m pydocstyle $(module)
+	@mypy $(module)
 
 html:
 	@$(MAKE) -C docs html

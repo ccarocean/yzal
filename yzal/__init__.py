@@ -1,5 +1,6 @@
 """Lazy evaluation for Python."""
 
+from typing import Generic, TypeVar, Callable  # for typing
 from functools import wraps
 import lazy_object_proxy
 
@@ -9,7 +10,10 @@ __version__ = '0.0.3'
 __all__ = ('Thunk', 'lazy', 'strict')
 
 
-class Thunk(lazy_object_proxy.Proxy):
+T = TypeVar('T')  # noqa
+
+
+class Thunk(lazy_object_proxy.Proxy, Generic[T]):
     """A thunk, used to delay a calculation until the value is needed.
 
     Thunk's behave as a delegating wrapper or proxy object to the result of
@@ -18,7 +22,7 @@ class Thunk(lazy_object_proxy.Proxy):
     through the Thunk.
     """
 
-    def __strict__(self):
+    def __strict__(self) -> T:
         """Get the strict (non lazy) value from the Thunk.
 
         Returns
@@ -30,7 +34,7 @@ class Thunk(lazy_object_proxy.Proxy):
         return self.__wrapped__  # relies on internal implementation of Proxy
 
 
-def lazy(wrapped):
+def lazy(wrapped: Callable[..., T]) -> Callable[..., Thunk[T]]:
     """Decorate a strict function, making it lazy.
 
     Lazy functions will return a :class:`Thunk` when called, delaying any
@@ -54,6 +58,17 @@ def lazy(wrapped):
     ..
 
     .. _pure function: https://en.wikipedia.org/wiki/Pure_function
+
+    Parameters
+    ----------
+    wrapped
+        Function or method to decorate.
+
+    Returns
+    -------
+    Callable
+        Decorated function.
+
     """
     @wraps(wrapped)
     def wrapper(*args, **kwargs):
@@ -63,7 +78,7 @@ def lazy(wrapped):
     return wrapper
 
 
-def strict(thunk):
+def strict(thunk: Thunk[T]) -> T:
     """Get the strict value, from a Thunk.
 
     Parameters

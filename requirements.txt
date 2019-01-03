@@ -11,6 +11,7 @@ pytest-mock
 pylint
 pycodestyle
 pydocstyle
+mypy
 
 # building
 wheel

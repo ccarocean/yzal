@@ -9,6 +9,9 @@ Added
 ^^^^^
 
 * This CHANGELOG.
+* Type hint support in compliance with `PEP 526`_ and `PEP 561`_.
+* Use mypy for static type checking.
+
 
 Changed
 ^^^^^^^
@@ -69,7 +72,11 @@ Added
 * :code:`lazy` decorator to construct lazy functions.
 
 
+
+
 .. _tox: https://tox.readthedocs.io/en/latest/
+.. _PEP 526: https://www.python.org/dev/peps/pep-0526/
+.. _PEP 561: https://www.python.org/dev/peps/pep-0561/
 
 .. _Unreleased: https://github.com/ccarocean/yzal/compare/v0.0.3...HEAD
 .. _v0.0.3: https://github.com/ccarocean/yzal/compare/v0.0.2...v0.0.3

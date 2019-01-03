@@ -18,6 +18,9 @@ setup(
     license='MIT',
     url='https://github.com/ccarocean/yzal',
     packages=find_packages(),
+    package_data={
+        'yzal': ['py.typed']
+    },
     setup_requires=['pytest-runner'],
     install_requires=[
         'lazy-object-proxy',
