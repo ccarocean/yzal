@@ -1,6 +1,6 @@
 """Lazy evaluation for Python."""
 
-from typing import cast, Any, Generic, TypeVar, Callable  # for typing
+from typing import cast, Any, Callable, Generic, TypeVar
 from functools import wraps
 import lazy_object_proxy  # type: ignore
 
@@ -35,7 +35,7 @@ class Thunk(lazy_object_proxy.Proxy, Generic[T]):
         return cast(T, self.__wrapped__)
 
 
-def lazy(wrapped: Callable[..., T]) -> Callable[..., Thunk[T]]:
+def lazy(wrapped: Callable[..., T]) -> Callable[..., T]:
     """Decorate a strict function, making it lazy.
 
     Lazy functions will return a :class:`Thunk` when called, delaying any
@@ -72,7 +72,7 @@ def lazy(wrapped: Callable[..., T]) -> Callable[..., Thunk[T]]:
 
     """
     @wraps(wrapped)
-    def wrapper(*args: Any, **kwargs: Any) -> Thunk[T]:
+    def wrapper(*args: Any, **kwargs: Any) -> T:
         def thunk() -> T:
             return wrapped(*args, **kwargs)
         return Thunk(thunk)
@@ -84,7 +84,7 @@ def strict(thunk: Thunk[T]) -> T:
 
     Parameters
     ----------
-    thunk : Thunk
+    thunk
         The :class:`Thunk` like object to get a final/strict value from.
 
     Returns
