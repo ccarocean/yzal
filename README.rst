@@ -1,6 +1,8 @@
 yzal
 ====
 
+Lazy evaluation for Python.
+
 |build-status|
 |coverage-status|
 
@@ -9,8 +11,6 @@ yzal
 |supported-versions|
 |wheel|
 
-
-Lazy evaluation for Python.
 
 
 
