@@ -1,5 +1,8 @@
-yzal |build-status| |coverage-status|
-=====================================
+yzal
+====
+
+|build-status|
+|coverage-status|
 
 |version|
 |supported-implementations|
