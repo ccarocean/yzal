@@ -24,7 +24,7 @@ coverage: check
 		--cov-report html
 
 check:
-	@python -m pylint --rcfile=.pylintrc $(module)
+	@python -m pylint --rcfile=pylintrc $(module)
 	@python -m pycodestyle $(module) tests
 	@python -m pydocstyle $(module)
 	@mypy $(module)
