@@ -17,6 +17,7 @@ Added
 * This CHANGELOG.
 * Type hint support in compliance with `PEP 526`_ and `PEP 561`_.
 * Use mypy for static type checking.
+* Dependency on mypy_ when running on Python 3.4.
 
 Changed
 ^^^^^^^
@@ -27,7 +28,6 @@ Removed
 ^^^^^^^
 
 * Unused rule from tox_ configuration.
-* Dropped support for Python 3.4 to support type hinting.
 
 
 
@@ -81,6 +81,7 @@ Added
 
 
 
+.. _mypy: http://mypy-lang.org/
 .. _tox: https://tox.readthedocs.io/en/latest/
 .. _PEP 526: https://www.python.org/dev/peps/pep-0526/
 .. _PEP 561: https://www.python.org/dev/peps/pep-0561/

@@ -54,8 +54,12 @@ The second way is to explicitly request a strict value.
 Requirements
 ------------
 
-* Python 3.5 or greater
+* Python 3.4 or greater
 * lazy_object_proxy_
+
+.. note::
+
+    Python 3.4 support requires mypy_.
 
 
 Installation
@@ -84,4 +88,5 @@ much harder to write:
    :target: http://codecov.io/gh/ccarocean/yzal?branch=master
    :alt: Test coverage
 .. _lazy_object_proxy: https://python-lazy-object-proxy.readthedocs.io/en/latest/
+.. _mypy: http://mypy-lang.org/
 .. _PyPI: https://pypi.org/
