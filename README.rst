@@ -1,7 +1,14 @@
 yzal |build-status| |coverage-status|
-=======================================
+=====================================
+
+|version|
+|supported-implementations|
+|supported-versions|
+|wheel|
+
 
 Lazy evaluation for Python.
+
 
 
 Usage
@@ -81,12 +88,31 @@ much harder to write:
 * lazy_object_proxy_ - A fast and thorough lazy object proxy.
 
 
-.. |build-status| image:: https://travis-ci.com/ccarocean/yzal.svg?branch=master&style=flat
-   :target: https://travis-ci.com/ccarocean/yzal
-   :alt: Build status
-.. |coverage-status| image:: http://codecov.io/gh/ccarocean/yzal/coverage.svg?branch=master
-   :target: http://codecov.io/gh/ccarocean/yzal?branch=master
-   :alt: Test coverage
 .. _lazy_object_proxy: https://python-lazy-object-proxy.readthedocs.io/en/latest/
 .. _mypy: http://mypy-lang.org/
 .. _PyPI: https://pypi.org/
+
+.. |build-status| image:: https://travis-ci.com/ccarocean/yzal.svg?branch=master&style=flat
+   :target: https://travis-ci.com/ccarocean/yzal
+   :alt: Build status
+
+.. |coverage-status| image:: http://codecov.io/gh/ccarocean/yzal/coverage.svg?branch=master
+   :target: http://codecov.io/gh/ccarocean/yzal?branch=master
+   :alt: Test coverage
+
+.. |version| image:: https://img.shields.io/pypi/v/yzal.svg
+    :alt: PyPI Package latest release
+    :target: https://pypi.python.org/pypi/yzal
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/yzal.svg
+    :alt: PyPI Wheel
+    :target: https://pypi.python.org/pypi/yzal
+
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/yzal.svg
+    :alt: Supported versions
+    :target: https://pypi.python.org/pypi/yzal
+
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/yzal.svg
+    :alt: Supported implementations
+    :target: https://pypi.python.org/pypi/yzal
+
