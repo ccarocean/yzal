@@ -1,11 +1,11 @@
 """Lazy evaluation for Python."""
 
-from typing import cast, Any, Callable, Generic, TypeVar
+from typing import cast, Any, Callable, Generic, TypeVar, Union
 from functools import wraps
 import lazy_object_proxy  # type: ignore
 
 
-__version__ = '0.0.4'
+__version__ = '0.0.5rc1'
 
 __all__ = ('Thunk', 'lazy', 'strict')
 
@@ -79,13 +79,18 @@ def lazy(wrapped: Callable[..., T]) -> Callable[..., T]:
     return wrapper
 
 
-def strict(thunk: Thunk[T]) -> T:
+def strict(thunk: Union[T, Thunk[T]], require: bool = False) -> T:
     """Get the strict value, from a Thunk.
 
     Parameters
     ----------
     thunk
-        The :class:`Thunk` like object to get a final/strict value from.
+        The :class:`Thunk` like object to get a final/strict value from.  If
+        :paramref:`require` is False this can be anything as :func:`strict`
+        will simply pass through the given object.
+    require
+        Set to True to force an error if the given :paramref:`thunk` is not a
+        :class:`Thunk`.
 
     Returns
     -------
@@ -94,8 +99,10 @@ def strict(thunk: Thunk[T]) -> T:
 
     """
     try:
-        return thunk.__strict__()
+        return cast(Thunk[T], thunk).__strict__()
     except AttributeError:
-        raise TypeError(
-            "object of type '{:s}' has no strict()".format(
-                type(thunk).__name__))
+        if require:
+            raise TypeError(
+                "object of type '{:s}' has no strict()".format(
+                    type(thunk).__name__))
+        return thunk  # not a thunk

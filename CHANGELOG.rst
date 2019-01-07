@@ -5,6 +5,12 @@ Changelog
 Unreleased_
 -----------
 
+Changed
+-------
+
+* Make `strict` relaxed by default, that is it will return the value given if
+  it is not a thunk.
+
 
 
 
