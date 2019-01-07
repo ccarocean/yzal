@@ -5,6 +5,11 @@ Changelog
 Unreleased_
 -----------
 
+Added
+-----
+
+* Documentation via Sphinx, build with :code:`make html` or :code:`make pdf`.
+
 Changed
 -------
 

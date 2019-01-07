@@ -3,6 +3,7 @@ lazy-object-proxy
 
 # documentation
 sphinx>=1.3
+sphinx_paramlinks
 
 # testing
 pytest
