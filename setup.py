@@ -10,7 +10,7 @@ def read(filename):
 
 setup(
     name='yzal',
-    version='0.0.5rc1',
+    version='0.0.5',
     author='Michael R. Shannon',
     author_email='mrshannon.aerospace@gmail.com',
     description='Lazy evaluation for Python.',
