@@ -17,10 +17,10 @@ init:
 	@pip install -q -r dev-requirements.txt
 
 test: check
-	@python -m pytest -v --cov=$(module) --cov-branch
+	@python -m pytest --cov=$(module) --cov-branch
 
 coverage: check
-	@python -m pytest -v --cov=$(module) --cov-branch \
+	@python -m pytest --cov=$(module) --cov-branch \
 		--cov-report html
 
 check:
