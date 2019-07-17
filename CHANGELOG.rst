@@ -5,6 +5,8 @@ Changelog
 Unreleased_
 -----------
 
+* Split :code:`requirements.txt` into :code:`requirements.txt` and
+  :code:`dev-requirements.txt`.
 * Reformatted CHANGELOG.
 
 
