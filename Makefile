@@ -14,7 +14,7 @@ all:
 	@echo 'clean-all        also removes tox and eggs'
 
 init:
-	@pip install -q -r requirements.txt
+	@pip install -q -r dev-requirements.txt
 
 test: check
 	@python -m pytest -v --cov=$(module) --cov-branch
