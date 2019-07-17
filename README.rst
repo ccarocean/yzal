@@ -64,12 +64,8 @@ The second way is to explicitly request a strict value.
 Requirements
 ------------
 
-* Python 3.4 or greater
+* Python 3.5 or greater
 * lazy_object_proxy_
-
-.. note::
-
-    Python 3.4 support requires mypy_.
 
 
 Installation

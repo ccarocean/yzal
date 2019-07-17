@@ -5,6 +5,8 @@ Changelog
 Unreleased_
 -----------
 
+* Remove runtime dependency on mypy_.
+* Remove support for Python 3.4 (see PEP429_).
 * Split :code:`requirements.txt` into :code:`requirements.txt` and
   :code:`dev-requirements.txt`.
 * Reformatted CHANGELOG.
@@ -24,7 +26,7 @@ v0.0.4_ - 2019-01-03
 
 * Add CHANGELOG.
 * Add type hint support in compliance with `PEP 526`_ and `PEP 561`_.
-* Use mypy for static type checking.
+* Use mypy_ for static type checking.
 * Add dependency on mypy_ when running on Python 3.4.
 * Changed from a module based distribution to a package based distribution.
 * Removed unused rule from tox_ configuration.
@@ -59,6 +61,7 @@ v0.0.1 - 2018-12-19
 
 .. _mypy: http://mypy-lang.org/
 .. _tox: https://tox.readthedocs.io/en/latest/
+.. _PEP 429: https://www.python.org/dev/peps/pep-0429/
 .. _PEP 526: https://www.python.org/dev/peps/pep-0526/
 .. _PEP 561: https://www.python.org/dev/peps/pep-0561/
 
